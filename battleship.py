@@ -79,17 +79,18 @@ battlefieldB = 	[0,0,0,0,0,0,0,0,0,0,
 
 #ship placement by players
 
-while ship_available = True:
+while ship_available == True:
 	shipChoice = input("What ship do you want to place?")
 	for ship in Ship.ship_names:
-		if shipChoice == ship_names(ship):
-			print("You have chosen to place {}".format(ship_names(ship))
-			verthor = input("Do you want to place it Horizontal or Vertical?")
-			if verthor != "Vertical" or "Horizontal":
+		if shipChoice == ship:
+			print("You have chosen to place {}".format(ship)
+
+			verhor = input("Do you want to place it Horizontal or Vertical?")
+			if verhor != "Vertical" or "Horizontal":
 				print("THAT IS NOT AN OPTION")
 
 		else:
-			print("Your chosesn ship: {} is not an option".fomrmat(shipChoice))
+			print("Your chosen ship: {} is not an option".format(shipChoice))
 			break
 
 
