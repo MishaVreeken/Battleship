@@ -4,7 +4,7 @@ import random
 #ship classes
 class Ship:
 	ship_available = True
-	ship_names ["Carrier", ]
+	ship_names ["Carrier", "Battleship", "Cruiser", "Destroyer", "Submarine"]
 
 	def __init__(self, ship_name, length, number):
 		self.name = ship_name
