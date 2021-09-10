@@ -10,43 +10,7 @@ class Ship:
 		self.name = ship_name
 		self.length = length
 
-
-# class Carrier(Ship):
-# 	def __init__(self, ship_name, length, number):
-# 		super().__init__(self, ship_name = "Carrier", length = 5, number = 1) 
-# 		self.number -= 1 
-# 		if self.number < 1:
-# 			Ship.ship_available = False
-
-# class Battleship(Ship):
-# 	def __init__(self, length, number):
-# 		super().__init__(self, ship_name = "Battleship", length = 4, number = 1) 
-# 		self.number -= 1 
-# 		if self.number < 1:
-# 			Ship.ship_available = False
-
-# class Cruiser(Ship):
-# 	def __init__(self, length, number):
-# 		super().__init__(self, ship_name = "Cruiser", length = 3, number = 1)
-# 		self.number -= 1 
-# 		if self.number < 1:
-# 			Ship.ship_available = False
-
-# class Destroyer(Ship):
-# 	def __init__(self, length, number):
-# 		super().__init__(self, ship_name = "Destroyer", length = 2, number = 2)
-# 		self.number -= 1 
-# 		if self.number < 1:
-# 			Ship.ship_available = False
-
-# class Submarine(Ship):
-# 	def __init__(self, length, number):
-# 		super().__init__(self, ship_name = "Submarine", length = 1, number = 2)
-# 		self.number -= 1 
-# 		if self.number < 1:
-# 			Ship.ship_available = False
-
-#battlfield 0 = empty 1 is ship
+#battlfield 0 = empty. 1 = ship, X = hit, - = miss
 
 battlefieldPlayer = 	[0,0,0,0,0,0,0,0,0,0,
 				0,0,0,0,0,0,0,0,0,0,
@@ -71,13 +35,13 @@ battlefieldBot = 	[0,0,0,0,0,0,0,0,0,0,
 				0,0,0,0,0,0,0,0,0,0,]
 
 
-
 #ship placement by players give list of ships with quantity and substract it from the pool after placement
 ship = []
 player = input("What is your name?: ")
 
 print("OK! {} Lets start a game of Battleship".format(player))
 while Ship.ship_available == True:
+
 	x = input("Pick a ship to place: \n"
 		"1 Carrier (Quantity: {Carrier})\n"
 		"2 Battleship (Quantity: {Battleship})\n"
@@ -123,14 +87,18 @@ while Ship.ship_available == True:
 	else:
 		print("That wasn't an option") 
 
+	if sum(Ship.ship_quantity) == 0:
+		Ship.ship_available = False
 
-verhor = input("Do you want to place it (H)orizontal or (V)ertical? ")  
-if verhor == "V" or "v":   #altering the choice doenst work yet
-	verhor == "Vertical"
-if verhor == "H" or "h":
-	verhor == "Horizontal"	
-print("Ok lets place it {}".format(verhor))
+##### code for positioning ######
+# verhor = input("Do you want to place it (H)orizontal or (V)ertical? ")  
+# if verhor == "V" or "v":   #altering the choice doenst work yet
+# 	verhor == "Vertical"
+# if verhor == "H" or "h":
+# 	verhor == "Horizontal"	
+# print("Ok lets place it {}".format(verhor))
+
+# place = input("where do you want to place the {}? ".format())
 
 
-
-place = input("where do you want to place the {}? ".format())
+####start game here####
