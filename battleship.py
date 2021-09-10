@@ -3,15 +3,12 @@ import random
 
 #ship classes
 class Ship:
-	ship_count = 0
 	ship_available = True
 
 	def __init__(self, length, number):
 		self.length = length
 		self.number = number
-		self.ship_count -= 1
-		if self.ship_count < 1:
-			ship_available = False
+		
 
 
 	def rotate(self, horizontal, vertical):
@@ -23,27 +20,41 @@ class Carrier(Ship):
 	def __init__(self, length, number):
 		self.length = 5
 		self.number = 1
-		super().ship_count
+		self.numer -= 1 
+		if self.number < 1:
+			Ship.ship_available = False
 
 class Battleship(Ship):
 	def __init__(self, length, number):
 		self.length = 4
 		self.number = 1
+		self.numer -= 1 
+		if self.number < 1:
+			Ship.ship_available = False
 
 class Cruiser(Ship):
 	def __init__(self, length, number):
 		self.length = 3
 		self.number = 1
+		self.numer -= 1 
+		if self.number < 1:
+			Ship.ship_available = False
 
 class Destroyer(Ship):
 	def __init__(self, length, number):
 		self.length = 2
 		self.number = 2
+		self.numer -= 1 
+		if self.number < 1:
+			Ship.ship_available = False
 
 class Submarine(Ship):
 	def __init__(self, length, number):
 		self.length = 1
 		self.number = 2
+		self.numer -= 1 
+		if self.number < 1:
+			Ship.ship_available = False
 
 #battlfield 0 = empty 1 is ship
 
