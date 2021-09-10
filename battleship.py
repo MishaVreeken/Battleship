@@ -4,7 +4,7 @@ import random
 #ship classes
 class Ship:
 	ship_available = True
-	ship_names ["Carrier", "Battleship", "Cruiser", "Destroyer", "Submarine"]
+	ship_names = ["Carrier", "Battleship", "Cruiser", "Destroyer", "Submarine"]
 
 	def __init__(self, ship_name, length, number):
 		self.name = ship_name
@@ -79,13 +79,13 @@ battlefieldB = 	[0,0,0,0,0,0,0,0,0,0,
 
 #ship placement by players
 
-while ship_available == True:
-	shipChoice = input("What ship do you want to place?")
+while Ship.ship_available == True:
+	shipChoice = input("What ship do you want to place? ")
 	for ship in Ship.ship_names:
 		if shipChoice == ship:
-			print("You have chosen to place {}".format(ship)
+			print("You have chosen to place {}".format(ship))
 
-			verhor = input("Do you want to place it Horizontal or Vertical?")
+			verhor = input("Do you want to place it Horizontal or Vertical? ")
 			if verhor != "Vertical" or "Horizontal":
 				print("THAT IS NOT AN OPTION")
 
