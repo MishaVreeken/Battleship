@@ -11,19 +11,22 @@ class Carrier(Ship):
 class Battleship(Ship):
 	def __init__(self, length, number):
 		self.length = 4
-		self.number = 2
+		self.number = 1
+
+class Cruiser(Ship):
+	def __init__(self, length, number):
+		self.length = 3
+		self.number = 1
 
 class Destroyer(Ship):
 	def __init__(self, length, number):
-		self.length = 3
-		self.number = 3
+		self.length = 2
+		self.number = 2
 
 class Submarine(Ship):
 	def __init__(self, length, number):
-		self.length = 3
-		self.number = 4
+		self.length = 1
+		self.number = 2
 
-class PatrolBoat(Ship):
-	def __init__(self, length, number):
-		self.length = 2
-		self.number = 5
+class Battlefield:
+	pass
