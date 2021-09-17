@@ -10,7 +10,7 @@ class Ship:
 		self.name = ship_name
 		self.length = length
 
-#battlfield 0 = empty. 1 = ship, X = hit, - = miss  met een while loop kan itereren
+#battlfield 0 = empty. 1 = ship, 2 = hit, -1 = miss  met een while loop kan itereren
 
 battlefieldPlayer = 	{"A1":0,"A2":0,"A3":0,"A4":0,"A5":0,"A6":0,"A7":0,"A8":0,"A9":0,"A10":0,
 				"B1":0,"B2":0,"B3":0,"B4":0,"B5":0,"B6":0,"B7":0,"B8":0,"B9":0,"B10":0,
@@ -89,6 +89,17 @@ while Ship.ship_available == True:
 
 	if sum(Ship.ship_quantity) == 0:
 		Ship.ship_available = False
+
+
+print(battlefieldPlayer)
+place = input("Where do you want to place {} (starting position)".format(Ship.name) )
+verhor = input("And do you want to place it (H)orizontal or (V)ertical?")
+while Ship.length >= 0:
+	for keys, values in battlefieldPlayer.items():
+		if keys == place:
+			values == 1
+	Ship.length -= 1
+
 
 ##### code for positioning ######
 # verhor = input("Do you want to place it (H)orizontal or (V)ertical? ")  
