@@ -91,8 +91,8 @@ while Ship.ship_available == True:
 		Ship.ship_available = False
 
 
-print(battlefieldPlayer)
-place = input("Where do you want to place {} (starting position)".format(Ship.name) )
+print(battlefieldPlayer) # print niet mooie
+place = input("Where do you want to place {} (starting position)".format(Ship.name) )   # moet in de vorige loop verwerkt worden denk met classes voor de simpelheid.
 verhor = input("And do you want to place it (H)orizontal or (V)ertical?")
 while Ship.length >= 0:
 	for keys, values in battlefieldPlayer.items():
